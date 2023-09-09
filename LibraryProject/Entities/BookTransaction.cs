@@ -7,5 +7,4 @@ public class BookTransaction
     public DateTime DeliveringDate { get; set; }
     public long BookId { get; set; }
     public string Country { get; set; }
-    public Book Book { get; set; }
 }

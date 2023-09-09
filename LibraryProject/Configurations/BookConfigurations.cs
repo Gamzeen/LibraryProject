@@ -10,6 +10,23 @@ public class BookConfigurations : IEntityTypeConfiguration<Book>
     {
         builder.HasKey(t => t.Id);
         builder.Property(t => t.Name).HasMaxLength(50).IsRequired();
-        builder.Property(t => t.BookTransactionId).IsRequired();
+        builder.HasData(Data());
+    }
+
+    IEnumerable<Book> Data()
+    {
+        return new List<Book>
+        {
+         new Book
+         {
+             Id= 1,
+             Name = "Sefiller",
+         },
+         new Book
+         {
+             Id= 2,
+             Name = "Az",
+         }
+        };
     }
 }
