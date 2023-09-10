@@ -1,6 +1,6 @@
 using LibraryProject.Entities;
 
-namespace LibraryProject.Services;
+namespace LibraryProject.Services.Interface;
 
 public interface IBookTransactionService
 {

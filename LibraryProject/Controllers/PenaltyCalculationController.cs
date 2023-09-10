@@ -1,11 +1,9 @@
-using LibraryProject.Data;
-using LibraryProject.Services;
+using LibraryProject.Services.Interface;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 
 namespace LibraryProject.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("v1/penalties")]
     [ApiController]
     public class PenaltyCalculationController : ControllerBase
     {
@@ -30,7 +28,7 @@ namespace LibraryProject.Controllers
             return Ok(book);
         }
 
-        [HttpPost("Book")]
+        [HttpPost("book")]
         public async Task<IActionResult> GiveBook(BookTransactionRequestModel request)
         {
             _bookTransactionService.CreateBookTransaction(request);
